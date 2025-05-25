@@ -1,0 +1,86 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "modifyAllocations",
+      "inputs": [
+        {
+          "name": "operator",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "params",
+          "type": "tuple[]",
+          "internalType": "struct AllocateParams[]",
+          "components": [
+            {
+              "name": "operatorSet",
+              "type": "tuple",
+              "internalType": "struct OperatorSet",
+              "components": [
+                {
+                  "name": "avs",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "id",
+                  "type": "uint32",
+                  "internalType": "uint32"
+                }
+              ]
+            },
+            {
+              "name": "strategies",
+              "type": "address[]",
+              "internalType": "address[]"
+            },
+            {
+              "name": "newMagnitudes",
+              "type": "uint64[]",
+              "internalType": "uint64[]"
+            }
+          ]
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "pure"
+    },
+    {
+      "type": "function",
+      "name": "registerForOperatorSets",
+      "inputs": [
+        {
+          "name": "operator",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct RegisterParams",
+          "components": [
+            {
+              "name": "avs",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "operatorSetIds",
+              "type": "uint32[]",
+              "internalType": "uint32[]"
+            },
+            {
+              "name": "data",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ]
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "pure"
+    }
+  ]
+}
